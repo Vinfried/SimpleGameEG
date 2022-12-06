@@ -67,7 +67,7 @@ Game::Game()
 			//@param 3 - Audio channels, 1 - Mono and 2 - Stereo
 			//@param 4 - BitChunks; The latency the audio device will send to the audio listener; Lower = Faster; Ideal values are betweem 1024 & 4096;
 		
-			Mix_OpenAudio(48000, MIX_DEFAULT_CHANNELS, 2, 4096);
+			Mix_OpenAudio(48000, MIX_DEFAULT_FORMAT, 2, 4096);
 			
 		}
 

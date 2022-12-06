@@ -48,7 +48,6 @@ void PlayState::draw(SDL_Renderer* renderer)
 	if (txt_pPosition != nullptr) {
 		txt_pPosition->draw(renderer);
 	}
-	pChar->playerAnims.run->draw(renderer, Vector2(x, y));
 }
 
 bool PlayState::onEnter(SDL_Renderer* renderer, SDL_Window* window)
@@ -61,7 +60,7 @@ bool PlayState::onEnter(SDL_Renderer* renderer, SDL_Window* window)
 	pChar = new Player(playerTexture, Vector2(0, 0), 109);
 	pChar->tag = "Player";
 	//load animations
-	pChar->playerAnims.attack = new Animation(playerTexture, 109, 0.1f, 0, 12);
+	pChar->playerAnims.attack = new Animation(playerTexture, 109, 0.1f, 0, 2);
 	pChar->playerAnims.idle = new Animation(playerTexture, 109, 0.1f, 65, 68);
 	pChar->playerAnims.run = new Animation(playerTexture, 109, 0.1f, 84, 89);
 	

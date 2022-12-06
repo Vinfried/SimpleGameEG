@@ -28,11 +28,12 @@ protected:
 
     void setMovementAxis(Vector2 axis);
     Vector2 getMovementAxis();
+    //velocity is the true representation of speed, this will gave a x and y value
+    Vector2 velocity;
 
 private:
 
-    //velocity is the true representation of speed, this will gave a x and y value
-    Vector2 velocity;
+    
     //this is going to detect input and move our character based on it's direction
     //make sure the number is normally between 0 and 1
     Vector2 movementAxis;
